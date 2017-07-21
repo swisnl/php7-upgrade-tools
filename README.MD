@@ -2,6 +2,9 @@
 
 This repository installs a set of tools for upgrading PHP installation to PHP 7.
 
+## Installation
+
+Clone the repository and run ``composer install``, this will setup all the tool and configure them. This installation only works on Linux.
 
 ## Installed tools
 
@@ -17,6 +20,11 @@ php7cc is a command line tool designed to make migration from PHP 5.3-5.6 to PHP
 
 [sstalle/php7cc](https://github.com/sstalle/php7cc)
 
+### Command
+
+In your console run ``./vendor/bin/php7cc /path/to/your/code`` to run PHP Compatibility checker.
+
+
 ## Example libraries 
 
 For very old sites, where you want some quick fixes for old the `mysql_*` and `ereg_*` functions you can include the following shims.
@@ -26,9 +34,12 @@ For very old sites, where you want some quick fixes for old the `mysql_*` and `e
 This library attempts to create a drop-in replacement for ext/mysql on PHP 7 using mysqli.
 
 [dshafik/php7-mysql-shim](https://github.com/dshafik/php7-mysql-shim)
-
+ bbrala/php7-ereg-shim
 ### PHP 7 Ereg shim
     
 Simple shim that can be included in old PHP 5 projects to provide ereg functionality through preg. Makes your life upgrading to PHP 7 a lot easier. 
 
-[bbrala/php7-ereg-shim](https://github.com/bbrala/php7-ereg-shim) 
+[bbrala/php7-ereg-shim](https://github.com/bbrala/php7-ereg-shim)
+
+composer require dshafik/php7-mysql-shim --dev
+composer require bbrala/php7-ereg-shim --dev 
