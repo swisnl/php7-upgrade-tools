@@ -20,7 +20,7 @@
         "post-autoload-dump" : [
             "rm -rf ./PhpCodeSnifferStandards/PhpCompatibility/*",
             "cp -R ./vendor/wimg/php-compatibility/* ./PhpCodeSnifferStandards/PhpCompatibility",
-            "vendor/bin/phpcs --config-set installed_paths ${pwd}/PhpCodeSnifferStandards"
+            "vendor/bin/phpcs --config-set installed_paths $(pwd)/PhpCodeSnifferStandards"
         ]
     },
     "config": {
