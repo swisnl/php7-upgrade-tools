@@ -4,7 +4,7 @@
     "type": "project",
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.0 || ^3.0.1",
-        "wimg/php-compatibility": "*",
+        "wimg/php-compatibility": "~7.1",
         "sstalle/php7cc": "^1.2",
         "dshafik/php7-mysql-shim": "^0.2.0",
         "bbrala/php7-ereg-shim": "^1.0"
