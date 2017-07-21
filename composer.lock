@@ -4,9 +4,43 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a64fc1d6909a2e0f137d74e923d6e0d3",
+    "content-hash": "bdd8183c7e8cae685f9116a464b0ef4a",
     "packages": [],
     "packages-dev": [
+        {
+            "name": "bbrala/php7-ereg-shim",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bbrala/php7-ereg-shim.git",
+                "reference": "958d1ca7b0c3f39e83d95f72409e740dff72029b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bbrala/php7-ereg-shim/zipball/958d1ca7b0c3f39e83d95f72409e740dff72029b",
+                "reference": "958d1ca7b0c3f39e83d95f72409e740dff72029b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/ereg.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Björn Brala",
+                    "email": "github@bjornbrala.com",
+                    "homepage": "http://bjornbrala.com"
+                }
+            ],
+            "description": "Shim for ereg functions",
+            "time": "2016-10-14T12:27:50+00:00"
+        },
         {
             "name": "bcncommerce/json-stream",
             "version": "0.3.0",
@@ -54,6 +88,48 @@
                 "writer"
             ],
             "time": "2014-04-27T23:53:40+00:00"
+        },
+        {
+            "name": "dshafik/php7-mysql-shim",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dshafik/php7-mysql-shim.git",
+                "reference": "615fb0f4111d584d5a36a9abc5f0c28e417a9c7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dshafik/php7-mysql-shim/zipball/615fb0f4111d584d5a36a9abc5f0c28e417a9c7e",
+                "reference": "615fb0f4111d584d5a36a9abc5f0c28e417a9c7e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mysqli": "*"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^5.2",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/mysql.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Davey Shafik",
+                    "email": "me@daveyshafik.com",
+                    "homepage": "https://daveyshafik.com"
+                }
+            ],
+            "description": "A PHP 7 shim for ext/mysql",
+            "time": "2016-10-03T19:25:05+00:00"
         },
         {
             "name": "nikic/php-parser",
