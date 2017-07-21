@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+/vendor/
+.idea
+PhpCodeSnifferStandards/*
+!PhpCodeSnifferStandards/.gitkeep
+!PhpCodeSnifferStandards/PhpCompatibility/.gitkeep

@@ -2,10 +2,10 @@
     "name": "swisnl/php7-upgrade-tools",
     "description": "Set of tools to simplyfy upgrading to PHP 7 from older versions \"sstalle/php7cc\": \"*\"",
     "type": "project",
-    "require": {
+    "require-dev": {
         "squizlabs/php_codesniffer": "^2.0 || ^3.0.1",
         "wimg/php-compatibility": "*",
-        "composer/installers": "~1.0"
+        "sstalle/php7cc": "^1.2"
     },
     "license": "MIT",
     "authors": [
@@ -18,7 +18,7 @@
         "post-autoload-dump" : [
             "rm -rf ./PhpCodeSnifferStandards/PhpCompatibility/*",
             "cp -R ./vendor/wimg/php-compatibility/* ./PhpCodeSnifferStandards/PhpCompatibility",
-            "vendor/bin/phpcs --config-set installed_paths /home/localcopy/php7-upgrade-tools/PhpCodeSnifferStandards"
+            "vendor/bin/phpcs --config-set installed_paths ${pwd}/PhpCodeSnifferStandards"
         ]
     },
     "config": {

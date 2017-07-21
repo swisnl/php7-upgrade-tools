@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <ruleset name="PHP_CodeSniffer">
     <description>The coding standard for PHP_CodeSniffer itself.</description>
+
+    <arg name="colors" />
+    <config name="show_progress" value="1"/>
+
     <!-- Run against the PHPCompatibility ruleset -->
     <rule ref="PHPCompatibility" />
+    <config name="testVersion" value="7.0"/>
 </ruleset>
