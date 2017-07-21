@@ -1,0 +1,27 @@
+{
+    "name": "swisnl/php7-upgrade-tools",
+    "description": "Set of tools to simplyfy upgrading to PHP 7 from older versions \"sstalle/php7cc\": \"*\"",
+    "type": "project",
+    "require": {
+        "squizlabs/php_codesniffer": "^2.0 || ^3.0.1",
+        "wimg/php-compatibility": "*",
+        "composer/installers": "~1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Björn Brala",
+            "email": "bjorn@swis.nl"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump" : [
+            "rm -rf ./PhpCodeSnifferStandards/PhpCompatibility/*",
+            "cp -R ./vendor/wimg/php-compatibility/* ./PhpCodeSnifferStandards/PhpCompatibility",
+            "vendor/bin/phpcs --config-set installed_paths /home/localcopy/php7-upgrade-tools/PhpCodeSnifferStandards"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
