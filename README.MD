@@ -35,11 +35,48 @@ This library attempts to create a drop-in replacement for ext/mysql on PHP 7 usi
 
 [dshafik/php7-mysql-shim](https://github.com/dshafik/php7-mysql-shim)
  bbrala/php7-ereg-shim
+ 
+`composer require dshafik/php7-mysql-shim --dev`
+ 
 ### PHP 7 Ereg shim
     
 Simple shim that can be included in old PHP 5 projects to provide ereg functionality through preg. Makes your life upgrading to PHP 7 a lot easier. 
 
 [bbrala/php7-ereg-shim](https://github.com/bbrala/php7-ereg-shim)
 
-composer require dshafik/php7-mysql-shim --dev
-composer require bbrala/php7-ereg-shim --dev 
+`composer require bbrala/php7-ereg-shim --dev`
+
+## Snippets
+
+### Preg replace eval has been removed
+
+Preg match with the [eval flag (/e) has been removed](http://php.net/manual/en/reference.pcre.pattern.modifiers.php#reference.pcre.pattern.modifiers.eval). 
+
+#### Before
+```
+<?php
+$html = $_POST['html'];
+
+// uppercase headings
+$html = preg_replace(
+    '(<h([1-6])>(.*?)</h\1>)e',
+    '"<h$1>" . strtoupper("$2") . "</h$1>"',
+    $html
+);
+```
+
+#### After
+```
+<?php
+$html = $_POST['html'];
+
+// uppercase headings
+$html = preg_replace_callback(
+    '(<h([1-6])>(.*?)</h\1>)',
+    function ($m) {
+        return "<h$m[1]>" . strtoupper($m[2]) . "</h$m[1]>";
+    },
+    $html
+);
+```
+ 
