@@ -4,8 +4,6 @@
     "type": "project",
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.0 || ^3.0.1",
-        "wimg/php-compatibility": "~7.1",
-        "sstalle/php7cc": "^1.2",
         "dshafik/php7-mysql-shim": "^0.2.0",
         "bbrala/php7-ereg-shim": "^1.0"
     },
@@ -18,12 +16,13 @@
     ],
     "scripts": {
         "post-autoload-dump" : [
-            "rm -rf ./PhpCodeSnifferStandards/PhpCompatibility/*",
-            "cp -R ./vendor/wimg/php-compatibility/* ./PhpCodeSnifferStandards/PhpCompatibility",
-            "vendor/bin/phpcs --config-set installed_paths $(pwd)/PhpCodeSnifferStandards"
         ]
     },
     "config": {
         "preferred-install": "dist"
+    },
+    "require": {
+        "phpcompatibility/php-compatibility": "^9.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
     }
 }
