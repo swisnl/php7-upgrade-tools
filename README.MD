@@ -12,17 +12,11 @@ Clone the repository and run ``composer install``, this will setup all the tool 
 
 This is a set of sniffs for PHP_CodeSniffer that checks for PHP version compatibility. It will allow you to analyse your code for compatibility with higher and lower versions of PHP.
 
-[wimg/PHPCompatibility](https://github.com/wimg/PHPCompatibility)
-
-### PHP 7 Compatibility Checker (php7cc)
-
-php7cc is a command line tool designed to make migration from PHP 5.3-5.6 to PHP 7 easier. It searches for potentially troublesome statements in existing code and generates reports containing file names, line numbers and short problem descriptions. It does not automatically fix code to work with the new PHP version.
-
-[sstalle/php7cc](https://github.com/sstalle/php7cc)
+[phpcompatibility/PHPCompatibility](https://github.com/phpcompatibility/PHPCompatibility)
 
 ### Command
 
-In your console run ``./vendor/bin/php7cc /path/to/your/code`` to run PHP Compatibility checker.
+In your console run ``vendor/bin/phpcs -p /path/to/code --standard=PHPCompatibility -v --report-full=report-file --extensions=php -n`` to run PHP Compatibility checker.
 
 
 ## Example libraries 
@@ -79,4 +73,4 @@ $html = preg_replace_callback(
     $html
 );
 ```
- 
+
